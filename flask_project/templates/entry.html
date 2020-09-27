@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method="post" action="/landing_page">
+    <p>This table shows JSON array</p>
+    <table>
+        <tr>
+            <td>a</td><td>x</td>
+        </tr>
+        <tr>
+            <td>b</td><td>y</td>
+        </tr>
+        <tr>
+            <td>c</td><td>z</td>
+        </tr>
+    </table>
+    <p>
+        <input name="new_link" type="text" value="Put your link here">
+    </p>
+    <p>
+        <button>UPLOAD</button>
+    </p>
+</form>
+
+<p>This is our json: {{ returned_json }}</p>
+
+{% endblock %}
